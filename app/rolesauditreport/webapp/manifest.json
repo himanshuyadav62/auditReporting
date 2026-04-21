@@ -100,11 +100,6 @@
           "pattern": ":?query:",
           "name": "RoleAuditReportsList",
           "target": "RoleAuditReportsList"
-        },
-        {
-          "pattern": "RoleAuditReports({key}):?query:",
-          "name": "RoleAuditReportsObjectPage",
-          "target": "RoleAuditReportsObjectPage"
         }
       ],
       "targets": {
@@ -115,32 +110,15 @@
           "options": {
             "settings": {
               "contextPath": "/RoleAuditReports",
-              "variantManagement": "Page",
-              "navigation": {
-                "RoleAuditReports": {
-                  "detail": {
-                    "route": "RoleAuditReportsObjectPage"
-                  }
-                }
-              },
+              "variantManagement": "None",
+              "initialLoad": true,
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable"
+                    "type": "GridTable"
                   }
                 }
               }
-            }
-          }
-        },
-        "RoleAuditReportsObjectPage": {
-          "type": "Component",
-          "id": "RoleAuditReportsObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/RoleAuditReports"
             }
           }
         }

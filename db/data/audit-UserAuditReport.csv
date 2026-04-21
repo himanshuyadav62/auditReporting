@@ -1,0 +1,9 @@
+ID,timestamp,eventType,event,userId,userName,userType,roleCollection,fieldChanged,oldValue,newValue,performedBy,userRole,status,subaccount
+1,2026-04-13T14:55:00Z,User Management,Create User,john.doe@corp.com,John Doe,IAS User,-,User Creation,-,Active,admin@corp.com,BTP Admin,Success,Incture-Dev
+2,2026-04-13T15:00:00Z,User Management,Login,john.doe@corp.com,John Doe,IAS User,-,Last Login,-,Success,Self,-,Success,Incture-Dev
+3,2026-04-13T15:25:00Z,Role Assignment,Assign,john.doe@corp.com,John Doe,IAS User,Finance_Admin,Role Assignment,Not Assigned,Assigned,admin@corp.com,BTP Admin,Success,Incture-Dev
+4,2026-04-13T15:40:00Z,Role Management,Update Role,-,-,-,Finance_Admin,Role Template,Display Only,Full Access,sec.admin@corp.com,Security Admin,Success,Incture-Dev
+5,2026-04-13T16:05:00Z,Role Assignment,Remove,john.doe@corp.com,John Doe,IAS User,Finance_Admin,Role Assignment,Assigned,Removed,sec.admin@corp.com,Security Admin,Success,Incture-Dev
+6,2026-04-13T16:10:00Z,User Management,Deactivate User,john.doe@corp.com,John Doe,IAS User,-,User Status,Active,Inactive,admin@corp.com,BTP Admin,Success,Incture-Dev
+7,2026-04-13T16:20:00Z,Role Management,Delete Role,-,-,-,Temp_Test_RC,Role Collection,Existing,Deleted,admin@corp.com,BTP Admin,Success,Incture-Dev
+8,2026-04-13T16:45:00Z,Role Assignment,Assign,svc_api@corp.com,API Service,Technical User,Viewer_Access,Role Assignment,Not Assigned,Assigned,admin@corp.com,BTP Admin,Failure,Incture-Dev

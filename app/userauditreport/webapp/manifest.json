@@ -100,11 +100,6 @@
           "pattern": ":?query:",
           "name": "UserAuditReportsList",
           "target": "UserAuditReportsList"
-        },
-        {
-          "pattern": "UserAuditReports({key}):?query:",
-          "name": "UserAuditReportsObjectPage",
-          "target": "UserAuditReportsObjectPage"
         }
       ],
       "targets": {
@@ -115,32 +110,15 @@
           "options": {
             "settings": {
               "contextPath": "/UserAuditReports",
-              "variantManagement": "Page",
-              "navigation": {
-                "UserAuditReports": {
-                  "detail": {
-                    "route": "UserAuditReportsObjectPage"
-                  }
-                }
-              },
+              "variantManagement": "None",
+              "initialLoad": true,
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable"
+                    "type": "GridTable"
                   }
                 }
               }
-            }
-          }
-        },
-        "UserAuditReportsObjectPage": {
-          "type": "Component",
-          "id": "UserAuditReportsObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/UserAuditReports"
             }
           }
         }

@@ -1,76 +1,171 @@
 using auditLoggingAndReportingService as service from '../../srv/service';
+
+// Add labels to fields
+annotate service.UserAuditReports with {
+    timestamp @(Common.Label : 'Timestamp (UTC)');
+    eventType @(Common.Label : 'Event Type');
+    event @(Common.Label : 'Event');
+    userId @(Common.Label : 'User ID');
+    userName @(Common.Label : 'User Name');
+    userType @(Common.Label : 'User Type');
+    roleCollection @(Common.Label : 'Role Collection');
+    fieldChanged @(Common.Label : 'Field Changed');
+    oldValue @(Common.Label : 'Old Value');
+    newValue @(Common.Label : 'New Value');
+    performedBy @(Common.Label : 'Performed By');
+    userRole @(Common.Label : 'User Role');
+    status @(Common.Label : 'Status');
+    subaccount @(Common.Label : 'Subaccount');
+};
+
+// Add value help for filter fields
+annotate service.UserAuditReports with {
+    eventType @(Common.ValueList : {
+        CollectionPath : 'UserEventTypeVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : eventType,
+                ValueListProperty : 'eventType'
+            }
+        ]
+    });
+    
+    event @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'UserEventVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : event,
+                    ValueListProperty : 'event'
+                }
+            ]
+        }
+    );
+    
+    userId @(Common.ValueList : {
+        CollectionPath : 'UserUserIdVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : userId,
+                ValueListProperty : 'userId'
+            }
+        ]
+    });
+    
+    userName @(Common.ValueList : {
+        CollectionPath : 'UserUserNameVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : userName,
+                ValueListProperty : 'userName'
+            }
+        ]
+    });
+    
+    status @(Common.ValueList : {
+        CollectionPath : 'UserStatusVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : status,
+                ValueListProperty : 'status'
+            }
+        ]
+    });
+    
+    subaccount @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'UserSubaccountVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : subaccount,
+                    ValueListProperty : 'subaccount'
+                }
+            ]
+        }
+    );
+};
+
 annotate service.UserAuditReports with @(
+    // Add filter fields to the selection
+    UI.SelectionFields : [
+        subaccount,
+        event,
+        userId,
+        timestamp
+    ],
+    Capabilities.FilterRestrictions : {
+        FilterExpressionRestrictions : [
+            {
+                Property : timestamp,
+                AllowedExpressions : 'SingleRange'
+            }
+        ]
+    },
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : 'timestamp',
                 Value : timestamp,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'eventType',
                 Value : eventType,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'event',
                 Value : event,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'userId',
                 Value : userId,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'userName',
                 Value : userName,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'userType',
                 Value : userType,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'roleCollection',
                 Value : roleCollection,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'fieldChanged',
                 Value : fieldChanged,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'oldValue',
                 Value : oldValue,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'newValue',
                 Value : newValue,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'performedBy',
                 Value : performedBy,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'userRole',
                 Value : userRole,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'status',
                 Value : status,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'subaccount',
                 Value : subaccount,
             },
         ],
@@ -86,28 +181,59 @@ annotate service.UserAuditReports with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Label : 'timestamp',
-            Value : timestamp,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'eventType',
             Value : eventType,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'event',
             Value : event,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'userId',
             Value : userId,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'userName',
             Value : userName,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : userType,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : roleCollection,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : fieldChanged,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : oldValue,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : newValue,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : performedBy,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : userRole,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : status,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : subaccount,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : timestamp,
         },
     ],
 );

@@ -1,56 +1,155 @@
 using auditLoggingAndReportingService as service from '../../srv/service';
+
+// Add labels to fields
+annotate service.RoleAuditReports with {
+    roleCollection @(Common.Label : 'Role Collection');
+    event @(Common.Label : 'Event');
+    timestamp @(Common.Label : 'Timestamp (UTC)');
+    changedByUserId @(Common.Label : 'Changed By (User ID)');
+    userRole @(Common.Label : 'User Role');
+    fieldChanged @(Common.Label : 'Field');
+    oldValue @(Common.Label : 'Old Value');
+    newValue @(Common.Label : 'New Value');
+    status @(Common.Label : 'Status');
+    subaccountName @(Common.Label : 'Subaccount Name');
+};
+
+// Add value help for filter fields
+annotate service.RoleAuditReports with {
+    roleCollection @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'RoleCollectionVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : roleCollection,
+                    ValueListProperty : 'roleCollection'
+                }
+            ]
+        }
+    );
+    
+    event @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'RoleEventVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : event,
+                    ValueListProperty : 'event'
+                }
+            ]
+        }
+    );
+    
+    status @(Common.ValueList : {
+        CollectionPath : 'RoleStatusVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : status,
+                ValueListProperty : 'status'
+            }
+        ]
+    });
+    
+    userRole @(Common.ValueList : {
+        CollectionPath : 'RoleUserRoleVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : userRole,
+                ValueListProperty : 'userRole'
+            }
+        ]
+    });
+
+    changedByUserId @(Common.ValueList : {
+        CollectionPath : 'RoleChangedByVH',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : changedByUserId,
+                ValueListProperty : 'changedByUserId'
+            }
+        ]
+    });
+    
+    subaccountName @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'RoleSubaccountNameVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : subaccountName,
+                    ValueListProperty : 'subaccountName'
+                }
+            ]
+        }
+    );
+};
+
 annotate service.RoleAuditReports with @(
+    // Add filter fields to the selection
+    UI.SelectionFields : [
+        subaccountName,
+        roleCollection,
+        event,
+        changedByUserId,
+        timestamp
+    ],
+    Capabilities.FilterRestrictions : {
+        FilterExpressionRestrictions : [
+            {
+                Property : timestamp,
+                AllowedExpressions : 'SingleRange'
+            }
+        ]
+    },
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : 'roleCollection',
                 Value : roleCollection,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'event',
                 Value : event,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'timestamp',
                 Value : timestamp,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'changedByUserId',
                 Value : changedByUserId,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'userRole',
                 Value : userRole,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'fieldChanged',
                 Value : fieldChanged,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'oldValue',
                 Value : oldValue,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'newValue',
                 Value : newValue,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'status',
                 Value : status,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'subaccountName',
                 Value : subaccountName,
             },
         ],
@@ -66,28 +165,43 @@ annotate service.RoleAuditReports with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Label : 'roleCollection',
             Value : roleCollection,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'event',
             Value : event,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'timestamp',
-            Value : timestamp,
-        },
-        {
-            $Type : 'UI.DataField',
-            Label : 'changedByUserId',
             Value : changedByUserId,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'userRole',
             Value : userRole,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : fieldChanged,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : oldValue,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : newValue,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : status,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : subaccountName,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : timestamp,
         },
     ],
 );

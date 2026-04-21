@@ -1,0 +1,7 @@
+ID,roleCollection,event,timestamp,changedByUserId,userRole,fieldChanged,oldValue,newValue,status,subaccountName
+1,Finance_Admin,Create,2026-04-13T15:10:00Z,admin@corp.com,BTP Admin,-,-,-,Success,Incture-Dev
+2,Finance_Admin,Assign,2026-04-13T15:25:00Z,admin@corp.com,BTP Admin,Role Assignment,Not Assigned,Assigned,Success,Incture-Dev
+3,Finance_Admin,Update,2026-04-13T15:40:00Z,sec.admin@corp.com,Security Admin,Role Template,Display Only Access,Full Access,Success,Incture-Dev
+4,Finance_Admin,Remove,2026-04-13T16:05:00Z,sec.admin@corp.com,Security Admin,Role Assignment,Assigned,Removed,Success,Incture-Dev
+5,Temp_Test_RC,Delete,2026-04-13T16:20:00Z,admin@corp.com,BTP Admin,-,Existing Role Collection,Deleted,Success,Incture-Dev
+6,Viewer_Access,Assign,2026-04-13T16:45:00Z,admin@corp.com,BTP Admin,Role Assignment,Not Assigned,Assigned,Failure,Incture-Dev

@@ -2,7 +2,7 @@ namespace audit;
 
 entity UserAuditReport {
     key ID             : UUID;
-    timestamp          : String(30);       // Timestamp (UTC)
+    timestamp          : Timestamp;        // Timestamp (UTC)
     eventType          : String(50);       // Event Type
     event              : String(100);      // Event
     userId             : String(100);      // User ID
@@ -22,7 +22,7 @@ entity RoleAuditReport {
     key ID             : UUID;
     roleCollection     : String(100);      // Role Collection
     event              : String(100);      // Event
-    timestamp          : String(30);       // Timestamp (UTC)
+    timestamp          : Timestamp;        // Timestamp (UTC)
     changedByUserId    : String(100);      // Changed By (User ID)
     userRole           : String(100);      // User Role
     fieldChanged       : String(100);      // Field
