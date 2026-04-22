@@ -100,11 +100,6 @@
           "pattern": ":?query:",
           "name": "ConfigurationReportList",
           "target": "ConfigurationReportList"
-        },
-        {
-          "pattern": "ConfigurationReport({key}):?query:",
-          "name": "ConfigurationReportObjectPage",
-          "target": "ConfigurationReportObjectPage"
         }
       ],
       "targets": {
@@ -115,14 +110,8 @@
           "options": {
             "settings": {
               "contextPath": "/ConfigurationReport",
-              "variantManagement": "Page",
-              "navigation": {
-                "ConfigurationReport": {
-                  "detail": {
-                    "route": "ConfigurationReportObjectPage"
-                  }
-                }
-              },
+              "variantManagement": "None",
+              "initialLoad": true,
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
@@ -130,17 +119,6 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "ConfigurationReportObjectPage": {
-          "type": "Component",
-          "id": "ConfigurationReportObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/ConfigurationReport"
             }
           }
         }

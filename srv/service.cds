@@ -33,4 +33,13 @@ service auditLoggingAndReportingService
     entity RoleSubaccountNameVH as select from db.RoleAuditReport { key subaccountName } group by subaccountName;
     @readonly
     entity RoleChangedByVH as select from db.RoleAuditReport { key changedByUserId } group by changedByUserId;
+
+    @readonly
+    entity ConfigSubaccountVH as select from db.ConfigurationReport { key subAccount } group by subAccount;
+    @readonly
+    entity ConfigRoleCollectionVH as select from db.ConfigurationReport { key userRole as roleCollection } group by userRole;
+    @readonly
+    entity ConfigEventVH as select from db.ConfigurationReport { key eventType as event } group by eventType;
+    @readonly
+    entity ConfigUserIdVH as select from db.ConfigurationReport { key userId } group by userId;
 }

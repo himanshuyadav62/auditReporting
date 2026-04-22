@@ -1,0 +1,21 @@
+ID,userId,userRole,eventType,btpService,subAccount,region,actionPerformed,timestamp
+550e8400-e29b-41d4-a716-446655440001,john.doe@corp.com,Global_Admins,Change Setting,XSUAA,Sub-1,us-east-1,Modified password policy,2026-04-10 09:00:00
+550e8400-e29b-41d4-a716-446655440002,jane.smith@corp.com,App_Devs,Update App,Cloud Foundry,Sub-1,us-east-1,Increased memory limit,2026-04-10 10:30:00
+550e8400-e29b-41d4-a716-446655440003,admin.user@corp.com,Global_Admins,Update Security,IAS,Sub-2,eu-central-1,Added new identity provider,2026-04-10 11:15:00
+550e8400-e29b-41d4-a716-446655440004,bob.jones@corp.com,Audit_Viewers,View Audit,Audit Log,Sub-1,us-east-1,Downloaded audit report,2026-04-11 14:20:00
+550e8400-e29b-41d4-a716-446655440005,alice.wong@corp.com,App_Devs,Create Route,Cloud Foundry,Sub-2,eu-central-1,Mapped new custom domain,2026-04-11 15:45:00
+550e8400-e29b-41d4-a716-446655440006,charlie.brown@corp.com,Global_Admins,Change Setting,Destination,Sub-3,ap-southeast-1,Updated proxy settings,2026-04-12 08:50:00
+550e8400-e29b-41d4-a716-446655440007,david.miller@corp.com,Security_Admins,Role Update,XSUAA,Sub-1,us-east-1,Assigned new scopes to role,2026-04-12 10:10:00
+550e8400-e29b-41d4-a716-446655440008,eve.davis@corp.com,Global_Admins,Update Config,Connectivity,Sub-2,eu-central-1,Refreshed cloud connector token,2026-04-12 13:30:00
+550e8400-e29b-41d4-a716-446655440009,frank.wilson@corp.com,App_Devs,Deploy,Cloud Foundry,Sub-3,ap-southeast-1,Pushed version 2.1.0,2026-04-13 09:45:00
+550e8400-e29b-41d4-a716-446655440010,grace.lee@corp.com,Audit_Viewers,View Log,Audit Log,Sub-1,us-east-1,Searched security events,2026-04-13 11:25:00
+550e8400-e29b-41d4-a716-446655440011,henry.ford@corp.com,Global_Admins,Change Setting,XSUAA,Sub-1,us-east-1,Modified session timeout,2026-04-14 10:00:00
+550e8400-e29b-41d4-a716-446655440012,isabel.garcia@corp.com,App_Devs,Update App,Cloud Foundry,Sub-2,eu-central-1,Scaled instance count to 3,2026-04-14 11:40:00
+550e8400-e29b-41d4-a716-446655440013,jack.white@corp.com,Global_Admins,Update Security,IAS,Sub-3,ap-southeast-1,Enabled MFA for admin group,2026-04-14 14:15:00
+550e8400-e29b-41d4-a716-446655440014,kelly.green@corp.com,Audit_Viewers,View Audit,Audit Log,Sub-2,eu-central-1,Exported user list,2026-04-15 09:10:00
+550e8400-e29b-41d4-a716-446655440015,liam.neeson@corp.com,App_Devs,Create Service,Object Store,Sub-1,us-east-1,Provisioned AWS S3 bucket,2026-04-15 13:55:00
+550e8400-e29b-41d4-a716-446655440016,mia.farrow@corp.com,Global_Admins,Change Setting,Destination,Sub-2,eu-central-1,Deleted obsolete destination,2026-04-16 08:20:00
+550e8400-e29b-41d4-a716-446655440017,noah.ark@corp.com,Security_Admins,Role Update,XSUAA,Sub-3,ap-southeast-1,Removed unused role template,2026-04-16 11:05:00
+550e8400-e29b-41d4-a716-446655440018,olivia.pope@corp.com,Global_Admins,Update Config,Connectivity,Sub-1,us-east-1,Added backend system mapping,2026-04-16 15:30:00
+550e8400-e29b-41d4-a716-446655440019,paul.walker@corp.com,App_Devs,Deploy,Cloud Foundry,Sub-2,eu-central-1,Reverted to version 2.0.8,2026-04-17 10:45:00
+550e8400-e29b-41d4-a716-446655440020,quinn.fabray@corp.com,Audit_Viewers,View Log,Audit Log,Sub-3,ap-southeast-1,Monitored traffic spikes,2026-04-17 14:25:00

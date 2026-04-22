@@ -40,6 +40,5 @@ entity ConfigurationReport : cuid {
     subAccount      : String(100);
     region          : String(100);
     actionPerformed : String(255);
-    timestampUTC    : Timestamp;
-
+    timestamp       : Timestamp;
 }
