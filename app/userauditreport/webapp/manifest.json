@@ -90,6 +90,11 @@
         "uri": "i18n/i18n.properties"
       }
     },
+    "settings": {
+      "tableSettings": {
+        "widthIncludingColumnHeader": true
+      }
+    },
     "resources": {
       "css": []
     },

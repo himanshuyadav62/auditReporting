@@ -182,58 +182,72 @@ annotate service.UserAuditReports with @(
         {
             $Type : 'UI.DataField',
             Value : eventType,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : event,
+            ![@HTML5.CssDefaults] : { width : '11rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : userId,
+            ![@HTML5.CssDefaults] : { width : '12rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : userName,
+            ![@HTML5.CssDefaults] : { width : '12rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : userType,
+            ![@HTML5.CssDefaults] : { width : '9rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : roleCollection,
+            ![@HTML5.CssDefaults] : { width : '12rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : fieldChanged,
+            ![@HTML5.CssDefaults] : { width : '11rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : oldValue,
+            ![@HTML5.CssDefaults] : { width : '15rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : newValue,
+            ![@HTML5.CssDefaults] : { width : '15rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : performedBy,
+            ![@HTML5.CssDefaults] : { width : '12rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : userRole,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : status,
+            ![@HTML5.CssDefaults] : { width : '8rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : subaccount,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : timestamp,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
     ],
 );

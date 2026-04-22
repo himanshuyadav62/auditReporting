@@ -92,34 +92,42 @@ annotate service.ConfigurationReport with @(
         {
             $Type : 'UI.DataField',
             Value : userId,
+            ![@HTML5.CssDefaults] : { width : '12rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : userRole,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : eventType,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : btpService,
+            ![@HTML5.CssDefaults] : { width : '11rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : subAccount,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : region,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : actionPerformed,
+            ![@HTML5.CssDefaults] : { width : '18rem' }
         },
         {
             $Type : 'UI.DataField',
             Value : timestamp,
+            ![@HTML5.CssDefaults] : { width : '10rem' }
         },
     ],
 );
