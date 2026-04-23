@@ -97,7 +97,7 @@ annotate service.ConfigurationReport with @(
         ]
     },
 
-    UI.LineItem #Results : [
+    UI.LineItem : [
         {
             $Type : 'UI.DataField',
             Value : userId,

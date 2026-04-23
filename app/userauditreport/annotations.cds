@@ -187,7 +187,7 @@ annotate service.UserAuditReports with @(
             Target : '@UI.FieldGroup#GeneratedGroup',
         },
     ],
-    UI.LineItem #Results : [
+    UI.LineItem : [
         {
             $Type : 'UI.DataField',
             Value : eventType,

@@ -111,7 +111,8 @@
           "options": {
             "settings": {
               "contextPath": "/ServiceAuditReports",
-              "variantManagement": "Page",
+              "initialLoad": true,
+              "variantManagement": "None",
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {

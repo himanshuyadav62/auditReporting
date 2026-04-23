@@ -106,7 +106,7 @@ annotate service.ServiceAuditReports with @(
         serviceName,
         planName
     ],
-    UI.LineItem #Results : [
+    UI.LineItem : [
         {
             $Type : 'UI.DataField',
             Value : subaccount,
