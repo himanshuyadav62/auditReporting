@@ -94,6 +94,15 @@ annotate service.UserAuditReports with {
 };
 
 annotate service.UserAuditReports with @(
+    UI.HeaderInfo : {
+        TypeName : 'Result',
+        TypeNamePlural : 'Results'
+    },
+    Capabilities : {
+        DeleteRestrictions : { Deletable : false },
+        InsertRestrictions : { Insertable : false },
+        UpdateRestrictions : { Updatable : false }
+    },
     // Add filter fields to the selection
     UI.SelectionFields : [
         subaccount,
@@ -178,76 +187,76 @@ annotate service.UserAuditReports with @(
             Target : '@UI.FieldGroup#GeneratedGroup',
         },
     ],
-    UI.LineItem : [
+    UI.LineItem #Results : [
         {
             $Type : 'UI.DataField',
             Value : eventType,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '8%' }
         },
         {
             $Type : 'UI.DataField',
             Value : event,
-            ![@HTML5.CssDefaults] : { width : '11rem' }
+            ![@HTML5.CssDefaults] : { width : '8%' }
         },
         {
             $Type : 'UI.DataField',
             Value : userId,
-            ![@HTML5.CssDefaults] : { width : '12rem' }
+            ![@HTML5.CssDefaults] : { width : '10%' }
         },
         {
             $Type : 'UI.DataField',
             Value : userName,
-            ![@HTML5.CssDefaults] : { width : '12rem' }
+            ![@HTML5.CssDefaults] : { width : '10%' }
         },
         {
             $Type : 'UI.DataField',
             Value : userType,
-            ![@HTML5.CssDefaults] : { width : '9rem' }
+            ![@HTML5.CssDefaults] : { width : '7%' }
         },
         {
             $Type : 'UI.DataField',
             Value : roleCollection,
-            ![@HTML5.CssDefaults] : { width : '12rem' }
+            ![@HTML5.CssDefaults] : { width : '9%' }
         },
         {
             $Type : 'UI.DataField',
             Value : fieldChanged,
-            ![@HTML5.CssDefaults] : { width : '11rem' }
+            ![@HTML5.CssDefaults] : { width : '8%' }
         },
         {
             $Type : 'UI.DataField',
             Value : oldValue,
-            ![@HTML5.CssDefaults] : { width : '15rem' }
+            ![@HTML5.CssDefaults] : { width : '10%' }
         },
         {
             $Type : 'UI.DataField',
             Value : newValue,
-            ![@HTML5.CssDefaults] : { width : '15rem' }
+            ![@HTML5.CssDefaults] : { width : '10%' }
         },
         {
             $Type : 'UI.DataField',
             Value : performedBy,
-            ![@HTML5.CssDefaults] : { width : '12rem' }
+            ![@HTML5.CssDefaults] : { width : '9%' }
         },
         {
             $Type : 'UI.DataField',
             Value : userRole,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '7%' }
         },
         {
             $Type : 'UI.DataField',
             Value : status,
-            ![@HTML5.CssDefaults] : { width : '8rem' }
+            ![@HTML5.CssDefaults] : { width : '5%' }
         },
         {
             $Type : 'UI.DataField',
             Value : subaccount,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '7%' }
         },
         {
             $Type : 'UI.DataField',
             Value : timestamp,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '8%' }
         },
     ],
 );

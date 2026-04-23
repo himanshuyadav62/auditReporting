@@ -43,16 +43,16 @@ modules:
       content:
         instance:
           destinations:
-            - Name: auditapprouter_auditLoggingAndReporting_html_repo_host
+            - Name: auditreporting_app_auditLoggingAndReporting_html_repo_host
               ServiceInstanceName: auditLoggingAndReporting-html5-app-host-service
               ServiceKeyName: auditLoggingAndReporting_html_repo_host-key
-              sap.cloud.service: auditapprouter
+              sap.cloud.service: auditreporting.app
             - Authentication: OAuth2UserTokenExchange
-              Name: auditapprouter_auditLoggingAndReporting_auth
+              Name: auditreporting_app_auditLoggingAndReporting_auth
               ServiceInstanceName: auditLoggingAndReporting-auth
               ServiceKeyName: auditLoggingAndReporting-auth-key
-              sap.cloud.service: auditapprouter
-          existing_destinations_policy: ignore
+              sap.cloud.service: auditreporting.app
+          existing_destinations_policy: update
     build-parameters:
       no-source: true
   - name: auditLoggingAndReporting-app-content

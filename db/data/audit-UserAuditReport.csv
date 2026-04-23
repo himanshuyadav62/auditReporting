@@ -1,9 +1,104 @@
 ID,timestamp,eventType,event,userId,userName,userType,roleCollection,fieldChanged,oldValue,newValue,performedBy,userRole,status,subaccount
-550e8400-e29b-41d4-a716-446655441001,2026-04-13 14:55:00,User Management,Create User,john.doe@corp.com,John Doe,IAS User,-,User Creation,-,Active,admin@corp.com,BTP Admin,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441002,2026-04-13 15:00:00,User Management,Login,john.doe@corp.com,John Doe,IAS User,-,Last Login,-,Success,Self,-,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441003,2026-04-13 15:25:00,Role Assignment,Assign,john.doe@corp.com,John Doe,IAS User,Finance_Admin,Role Assignment,Not Assigned,Assigned,admin@corp.com,BTP Admin,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441004,2026-04-13 15:40:00,Role Management,Update Role,-,-,-,Finance_Admin,Role Template,Display Only,Full Access,sec.admin@corp.com,Security Admin,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441005,2026-04-13 16:05:00,Role Assignment,Remove,john.doe@corp.com,John Doe,IAS User,Finance_Admin,Role Assignment,Assigned,Removed,sec.admin@corp.com,Security Admin,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441006,2026-04-13 16:10:00,User Management,Deactivate User,john.doe@corp.com,John Doe,IAS User,-,User Status,Active,Inactive,admin@corp.com,BTP Admin,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441007,2026-04-13 16:20:00,Role Management,Delete Role,-,-,-,Temp_Test_RC,Role Collection,Existing,Deleted,admin@corp.com,BTP Admin,Success,Incture-Dev
-550e8400-e29b-41d4-a716-446655441008,2026-04-13 16:45:00,Role Assignment,Assign,svc_api@corp.com,API Service,Technical User,Viewer_Access,Role Assignment,Not Assigned,Assigned,admin@corp.com,BTP Admin,Failure,Incture-Dev
+1,2026-04-13T15:05:00Z,User Management,Create User,ramesh.reddy@incture.com,Ramesh Reddy,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+2,2026-04-13T15:15:00Z,User Management,Deactivate User,sachin.jangir@incture.com,Sachin Jangir,Standard,-,User Status,Active,Inactive,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+3,2026-04-13T15:25:00Z,User Management,Create User,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,-,User Creation,-,Active,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Prod
+4,2026-04-13T15:35:00Z,Role Management,Update Role,-,-,-,Finance_Admin,Role Template,Display Only,Full Access,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+5,2026-04-13T15:45:00Z,Role Management,Update Role,-,-,-,Finance_Admin,Role Template,Display Only,Full Access,avinash.konatala@incture.com,Security Admin,Success,Incture-QA
+6,2022-01-13T15:55:00Z,User Management,Create User,ratnank.sharma@incture.com,Ratnank Sharma,Standard,-,User Creation,-,Active,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+7,2026-04-13T16:05:00Z,Role Assignment,Remove,honey.gyan@incture.com,Honey Gyanani,Standard,Developer_Role,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-QA
+8,2026-04-13T16:15:00Z,User Management,Deactivate User,sachin.jangir@incture.com,Sachin Jangir,Standard,-,User Status,Active,Inactive,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+9,2026-04-13T16:25:00Z,User Management,Deactivate User,sachin.jangir@incture.com,Sachin Jangir,Standard,-,User Status,Active,Inactive,avinash.konatala@incture.com,Security Admin,Success,Incture-QA
+10,2026-04-13T16:35:00Z,Role Management,Delete Role,-,-,-,Developer_Role,Role Collection,Existing,Deleted,rohith.ramesh@incture.com,IT Lead,Failure,Incture-Dev
+11,2026-04-13T16:45:00Z,Role Management,Update Role,-,-,-,Sales_Analyst,Role Template,Display Only,Full Access,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+12,2026-04-13T16:55:00Z,Role Assignment,Remove,ramesh.reddy@incture.com,Ramesh Reddy,Standard,Sales_Analyst,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+13,2026-04-13T17:05:00Z,User Management,Deactivate User,honey.gyan@incture.com,Honey Gyanani,Standard,-,User Status,Active,Inactive,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+14,2026-04-13T17:15:00Z,Role Assignment,Remove,honey.gyan@incture.com,Honey Gyanani,Standard,Temp_Test_RC,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-QA
+15,2026-04-13T17:25:00Z,Role Management,Update Role,-,-,-,Audit_Viewer,Role Template,Display Only,Full Access,rohith.ramesh@incture.com,IT Lead,Success,Incture-Test
+16,2026-04-13T17:35:00Z,User Management,Login,ramesh.reddy@incture.com,Ramesh Reddy,Standard,-,Last Login,-,Success,mahesh.kumark@incture.com,-,Success,Incture-Dev
+17,2026-03-13T17:45:00Z,User Management,Login,ratnank.sharma@incture.com,Ratnank Sharma,Standard,-,Last Login,-,Success,,-,Success,Incture-Prod
+18,2026-04-13T17:55:00Z,Role Assignment,Remove,ramesh.reddy@incture.com,Ramesh Reddy,Standard,Finance_Admin,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+19,2026-04-13T18:05:00Z,Role Management,Update Role,-,-,-,Finance_Admin,Role Template,Display Only,Full Access,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+20,2026-04-13T18:15:00Z,Role Management,Update Role,-,-,-,Audit_Viewer,Role Template,Display Only,Full Access,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+21,2026-04-13T18:25:00Z,Role Assignment,Remove,vineet.vikram@incture.com,Vineet Vikram,Technical User,Developer_Role,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+22,2024-04-28T11:51:00Z,Role Assignment,Assign,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Audit_Viewer,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+23,2026-04-13T18:45:00Z,Role Management,Update Role,-,-,-,Developer_Role,Role Template,Display Only,Full Access,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+24,2026-04-13T18:55:00Z,Role Management,Delete Role,-,-,-,Audit_Viewer,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+25,2026-04-13T19:05:00Z,Role Management,Delete Role,-,-,-,Developer_Role,Role Collection,Existing,Deleted,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+26,2026-04-13T19:15:00Z,Role Management,Update Role,-,-,-,Audit_Viewer,Role Template,Display Only,Full Access,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-QA
+27,2026-04-13T19:25:00Z,User Management,Create User,ramesh.reddy@incture.com,Ramesh Reddy,Standard,-,User Creation,-,Active,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+28,2026-04-13T19:35:00Z,Role Assignment,Remove,honey.gyan@incture.com,Honey Gyanani,Standard,Viewer_Access,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+29,2026-04-13T19:45:00Z,Role Management,Update Role,-,-,-,Developer_Role,Role Template,Display Only,Full Access,rohith.ramesh@incture.com,IT Lead,Failure,Incture-Dev
+30,2026-04-13T19:55:00Z,Role Management,Delete Role,-,-,-,Viewer_Access,Role Collection,Existing,Deleted,rohith.ramesh@incture.com,IT Lead,Failure,Incture-Prod
+31,2026-04-13T20:05:00Z,User Management,Deactivate User,ratnank.sharma@incture.com,Ratnank Sharma,Standard,-,User Status,Active,Inactive,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+32,2026-04-13T20:15:00Z,Role Assignment,Assign,honey.gyan@incture.com,Honey Gyanani,Standard,Viewer_Access,Role Assignment,Not Assigned,Assigned,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+33,2026-04-13T20:25:00Z,User Management,Login,sachin.jangir@incture.com,Sachin Jangir,Standard,-,Last Login,-,Success,mahesh.kumark@incture.com,-,Success,Incture-Dev
+34,2026-04-13T20:35:00Z,Role Management,Update Role,-,-,-,Developer_Role,Role Template,Display Only,Full Access,avinash.konatala@incture.com,Security Admin,Failure,Incture-Test
+35,2026-04-13T20:45:00Z,Role Management,Delete Role,-,-,-,Sales_Analyst,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+36,2024-04-28T11:50:00Z,Role Assignment,Assign,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Sales_Analyst,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+37,2026-04-13T21:05:00Z,Role Management,Delete Role,-,-,-,Developer_Role,Role Collection,Existing,Deleted,rohith.ramesh@incture.com,IT Lead,Failure,Incture-Dev
+38,2026-04-13T21:15:00Z,Role Management,Delete Role,-,-,-,Sales_Analyst,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-QA
+39,2026-04-13T21:25:00Z,Role Assignment,Assign,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Viewer_Access,Role Assignment,Not Assigned,Assigned,avinash.konatala@incture.com,Security Admin,Success,Incture-QA
+40,2026-04-13T21:35:00Z,User Management,Login,sachin.jangir@incture.com,Sachin Jangir,Standard,-,Last Login,-,Success,mahesh.kumark@incture.com,-,Success,Incture-Test
+41,2026-04-13T21:45:00Z,Role Management,Delete Role,-,-,-,Finance_Admin,Role Collection,Existing,Deleted,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+42,2021-04-13T21:55:00Z,Role Assignment,Remove,kunal.agarwal@incture.com,Kunal Agarwal,Shadow User,Finance_Admin,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-QA
+43,2026-04-13T22:05:00Z,Role Assignment,Remove,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Viewer_Access,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Prod
+44,2026-04-13T22:15:00Z,Role Assignment,Remove,ramesh.reddy@incture.com,Ramesh Reddy,Standard,Audit_Viewer,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+45,2022-06-11T12:25:00Z,Role Assignment,Assign,kunal.agarwal@incture.com,Kunal Agarwal,Shadow User,Temp_Test_RC,Role Assignment,Not Assigned,Assigned,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+46,2026-04-13T22:35:00Z,Role Assignment,Assign,sachin.jangir@incture.com,Sachin Jangir,Standard,Viewer_Access,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+47,2026-04-13T22:45:00Z,User Management,Create User,ramesh.reddy@incture.com,Ramesh Reddy,Standard,-,User Creation,-,Active,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+48,2026-04-13T22:55:00Z,Role Management,Update Role,-,-,-,Developer_Role,Role Template,Display Only,Full Access,rohith.ramesh@incture.com,IT Lead,Success,Incture-Test
+49,2026-04-13T23:05:00Z,Role Management,Delete Role,-,-,-,Developer_Role,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-QA
+50,2026-04-13T23:15:00Z,Role Assignment,Assign,ramesh.reddy@incture.com,Ramesh Reddy,Standard,Temp_Test_RC,Role Assignment,Not Assigned,Assigned,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+51,2026-04-14T05:50:00Z,User Management,Deactivate User,ratnank.sharma@incture.com,Ratnank Sharma,Standard,-,User Status,Active,Inactive,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+52,2026-04-13T23:35:00Z,Role Assignment,Remove,sachin.jangir@incture.com,Sachin Jangir,Standard,Finance_Admin,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-QA
+53,2026-04-13T23:45:00Z,Role Management,Delete Role,-,-,-,Viewer_Access,Role Collection,Existing,Deleted,rohith.ramesh@incture.com,IT Lead,Failure,Incture-Dev
+54,2026-04-13T23:55:00Z,Role Management,Delete Role,-,-,-,Sales_Analyst,Role Collection,Existing,Deleted,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+55,2026-04-14T00:05:00Z,Role Management,Delete Role,-,-,-,Audit_Viewer,Role Collection,Existing,Deleted,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+56,2026-03-14T00:15:00Z,Role Assignment,Assign,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Finance_Admin,Role Assignment,Not Assigned,Assigned,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+57,2026-04-14T00:25:00Z,User Management,Create User,honey.gyan@incture.com,Honey Gyanani,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+58,2026-04-14T00:35:00Z,Role Management,Update Role,-,-,-,Viewer_Access,Role Template,Display Only,Full Access,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Prod
+59,2026-04-14T00:45:00Z,User Management,Create User,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+60,2026-04-14T00:55:00Z,Role Management,Delete Role,-,-,-,Viewer_Access,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+61,2026-04-14T01:05:00Z,Role Assignment,Remove,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Sales_Analyst,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-QA
+62,2026-04-14T01:15:00Z,User Management,Create User,ramesh.reddy@incture.com,Ramesh Reddy,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+63,2026-04-14T01:25:00Z,User Management,Login,sachin.jangir@incture.com,Sachin Jangir,Standard,-,Last Login,-,Success,mahesh.kumark@incture.com,-,Success,Incture-Dev
+64,2026-04-14T01:35:00Z,Role Assignment,Assign,ramesh.reddy@incture.com,Ramesh Reddy,Standard,Developer_Role,Role Assignment,Not Assigned,Assigned,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+65,2026-04-14T01:45:00Z,Role Management,Delete Role,-,-,-,Temp_Test_RC,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+66,2022-07-11T12:00:00Z,Role Assignment,Remove,kunal.agarwal@incture.com,Kunal Agarwal,Shadow User,Viewer_Access,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+67,2026-04-14T02:05:00Z,User Management,Create User,honey.gyan@incture.com,Honey Gyanani,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+68,2026-04-14T02:15:00Z,Role Assignment,Assign,honey.gyan@incture.com,Honey Gyanani,Standard,Finance_Admin,Role Assignment,Not Assigned,Assigned,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+69,2026-04-14T02:25:00Z,Role Assignment,Assign,himanshu.yadav@incture.com,Himanshu Yadav,Technical User,Developer_Role,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Test
+70,2026-04-14T02:35:00Z,User Management,Login,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,-,Last Login,-,Success,mahesh.kumark@incture.com,-,Success,Incture-Dev
+71,2026-04-14T02:45:00Z,Role Management,Delete Role,-,-,-,Developer_Role,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Prod
+72,2026-04-14T02:55:00Z,User Management,Create User,sachin.jangir@incture.com,Sachin Jangir,Standard,-,User Creation,-,Active,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+73,2025-01-14T03:05:00Z,Role Assignment,Remove,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Audit_Viewer,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+74,2026-04-14T03:15:00Z,Role Management,Delete Role,-,-,-,Sales_Analyst,Role Collection,Existing,Deleted,rohith.ramesh@incture.com,IT Lead,Failure,Incture-Prod
+75,2026-04-14T03:25:00Z,Role Assignment,Assign,honey.gyan@incture.com,Honey Gyanani,Standard,Audit_Viewer,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+76,2026-04-14T03:35:00Z,Role Assignment,Assign,sachin.jangir@incture.com,Sachin Jangir,Standard,Finance_Admin,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+77,2026-04-14T03:45:00Z,Role Assignment,Assign,ramesh.reddy@incture.com,Ramesh Reddy,Standard,Finance_Admin,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Test
+78,2026-04-14T03:55:00Z,Role Assignment,Assign,vineet.vikram@incture.com,Vineet Vikram,Technical User,Developer_Role,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-QA
+79,2026-04-14T04:05:00Z,Role Assignment,Assign,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Temp_Test_RC,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Test
+80,2026-04-14T04:15:00Z,User Management,Create User,honey.gyan@incture.com,Honey Gyanani,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+81,2026-04-14T04:25:00Z,Role Assignment,Assign,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Developer_Role,Role Assignment,Not Assigned,Assigned,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Prod
+82,2026-04-14T04:35:00Z,Role Assignment,Remove,sachin.jangir@incture.com,Sachin Jangir,Standard,Finance_Admin,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+83,2026-01-14T04:45:00Z,Role Assignment,Remove,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Sales_Analyst,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+84,2026-04-14T04:55:00Z,Role Management,Delete Role,-,-,-,Sales_Analyst,Role Collection,Existing,Deleted,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+85,2026-04-14T05:05:00Z,User Management,Create User,ramesh.reddy@incture.com,Ramesh Reddy,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Test
+86,2026-04-14T05:15:00Z,User Management,Create User,honey.gyan@incture.com,Honey Gyanani,Standard,-,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+87,2026-04-14T05:25:00Z,Role Assignment,Remove,honey.gyan@incture.com,Honey Gyanani,Standard,Finance_Admin,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-QA
+88,2026-04-14T05:35:00Z,Role Assignment,Assign,sachin.jangir@incture.com,Sachin Jangir,Standard,Temp_Test_RC,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+89,2026-04-14T05:45:00Z,Role Assignment,Remove,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Developer_Role,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Test
+90,2026-04-14T05:55:00Z,Role Assignment,Remove,himanshu.yadav@incture.com,Himanshu Yadav,Technical User,Viewer_Access,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Dev
+91,2026-04-14T06:05:00Z,Role Management,Update Role,-,-,-,Sales_Analyst,Role Template,Display Only,Full Access,rajeev.amerneni@incture.com,BTP Admin,Failure,Incture-Test
+92,2026-04-14T06:15:00Z,Role Assignment,Remove,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Finance_Admin,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+93,2026-04-14T05:46:00Z,Role Assignment,Remove,ratnank.sharma@incture.com,Ratnank Sharma,Standard,Temp_Test_RC,Role Assignment,Assigned,Removed,rajeev.amerneni@incture.com,BTP Admin,Success,Incture-Test
+94,2026-04-14T06:35:00Z,Role Management,Update Role,-,-,-,Temp_Test_RC,Role Template,Display Only,Full Access,rohith.ramesh@incture.com,IT Lead,Success,Incture-QA
+95,2026-04-14T06:45:00Z,Role Management,Delete Role,-,-,-,Developer_Role,Role Collection,Existing,Deleted,avinash.konatala@incture.com,Security Admin,Success,Incture-QA
+96,2026-04-14T06:55:00Z,Role Assignment,Assign,himanshu.yadav@incture.com,Himanshu Yadav,Technical User,Viewer_Access,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+97,2026-04-14T07:05:00Z,Role Assignment,Remove,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Sales_Analyst,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+98,2026-01-14T04:46:00Z,User Management,Deactivate User,ratnank.sharma@incture.com,Ratnank Sharma,Standard,-,User Status,Active,Inactive,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+99,2026-04-14T07:25:00Z,Role Assignment,Assign,sachin.jangir@incture.com,Sachin Jangir,Standard,Sales_Analyst,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Prod
+100,2026-04-14T07:35:00Z,Role Assignment,Remove,pranav.nagpal@incture.com,Pranav Nagpal,Privileged,Audit_Viewer,Role Assignment,Assigned,Removed,avinash.konatala@incture.com,Security Admin,Success,Incture-Prod
+101,2026-01-28T04:40:00Z,User Management,Create User,svc_apim@incture.com,SVC_APIM,API User,P2P_API_User,User Creation,-,Active,avinash.konatala@incture.com,Security Admin,Success,Incture-Dev
+102,2026-01-28T06:00:00Z,Role Assignment,Assign,svc_apim@incture.com,SVC_APIM,API User,P2P_API_User,Role Assignment,Not Assigned,Assigned,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev
+103,2026-02-27T02:00:00Z,Role Assignment,Remove,svc_apim@incture.com,SVC_APIM,API User,P2P_API_User,Role Assignment,Assigned,Removed,rohith.ramesh@incture.com,IT Lead,Success,Incture-Dev

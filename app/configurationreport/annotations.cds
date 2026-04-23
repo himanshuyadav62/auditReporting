@@ -71,6 +71,15 @@ annotate service.ConfigurationReport with {
 };
 
 annotate service.ConfigurationReport with @(
+    UI.HeaderInfo : {
+        TypeName : 'Result',
+        TypeNamePlural : 'Results'
+    },
+    Capabilities : {
+        DeleteRestrictions : { Deletable : false },
+        InsertRestrictions : { Insertable : false },
+        UpdateRestrictions : { Updatable : false }
+    },
     // Add filter fields to the selection
     UI.SelectionFields : [
         subAccount,
@@ -88,46 +97,46 @@ annotate service.ConfigurationReport with @(
         ]
     },
 
-    UI.LineItem : [
+    UI.LineItem #Results : [
         {
             $Type : 'UI.DataField',
             Value : userId,
-            ![@HTML5.CssDefaults] : { width : '12rem' }
+            ![@HTML5.CssDefaults] : { width : '13%' }
         },
         {
             $Type : 'UI.DataField',
             Value : userRole,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '11%' }
         },
         {
             $Type : 'UI.DataField',
             Value : eventType,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '11%' }
         },
         {
             $Type : 'UI.DataField',
             Value : btpService,
-            ![@HTML5.CssDefaults] : { width : '11rem' }
+            ![@HTML5.CssDefaults] : { width : '12%' }
         },
         {
             $Type : 'UI.DataField',
             Value : subAccount,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '11%' }
         },
         {
             $Type : 'UI.DataField',
             Value : region,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '9%' }
         },
         {
             $Type : 'UI.DataField',
             Value : actionPerformed,
-            ![@HTML5.CssDefaults] : { width : '18rem' }
+            ![@HTML5.CssDefaults] : { width : '20%' }
         },
         {
             $Type : 'UI.DataField',
             Value : timestamp,
-            ![@HTML5.CssDefaults] : { width : '10rem' }
+            ![@HTML5.CssDefaults] : { width : '11%' }
         },
     ],
 );
