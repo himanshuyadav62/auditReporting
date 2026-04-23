@@ -8,6 +8,8 @@ service auditLoggingAndReportingService
 
     entity ConfigurationReport as projection on db.ConfigurationReport;
 
+    entity ServiceAuditReports as projection on db.ServiceAuditReport;
+
     @readonly
     entity UserEventTypeVH as select from db.UserAuditReport { key eventType } group by eventType;
     @readonly
@@ -42,4 +44,17 @@ service auditLoggingAndReportingService
     entity ConfigEventVH as select from db.ConfigurationReport { key eventType as event } group by eventType;
     @readonly
     entity ConfigUserIdVH as select from db.ConfigurationReport { key userId } group by userId;
+
+    @readonly
+    entity ServiceSubaccountVH as select from db.ServiceAuditReport { key subaccount } group by subaccount;
+    @readonly
+    entity ServiceNameVH as select from db.ServiceAuditReport { key serviceName } group by serviceName;
+    @readonly
+    entity ServicePlanVH as select from db.ServiceAuditReport { key planName } group by planName;
+    @readonly
+    entity ServiceStatusVH as select from db.ServiceAuditReport { key status } group by status;
+    @readonly
+    entity ServiceCreatedByVH as select from db.ServiceAuditReport { key createdBy } group by createdBy;
+    @readonly
+    entity ServiceChangedByVH as select from db.ServiceAuditReport { key changedBy } group by changedBy;
 }

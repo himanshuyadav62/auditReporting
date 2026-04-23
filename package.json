@@ -20,7 +20,8 @@
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
     "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
     "watch-rolesauditreport": "cds watch --open rolesauditreport/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-configurationreport": "cds watch --open configurationreport/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-configurationreport": "cds watch --open configurationreport/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-servicesauditreport": "cds watch --open servicesauditreport/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "cds": {
@@ -37,6 +38,7 @@
   "sapux": [
     "app/userauditreport",
     "app/rolesauditreport",
-    "app/configurationreport"
+    "app/configurationreport",
+    "app/servicesauditreport"
   ]
 }

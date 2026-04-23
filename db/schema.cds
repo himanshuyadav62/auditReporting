@@ -42,3 +42,14 @@ entity ConfigurationReport : cuid {
     actionPerformed : String(255);
     timestamp       : Timestamp;
 }
+
+entity ServiceAuditReport : cuid {
+    subaccount    : String(100); // Subaccount
+    serviceName   : String(100); // Service Name
+    planName      : String(100); // Plan Name
+    status        : String(50);  // Status
+    createdOn     : Timestamp;   // Created On
+    createdBy     : String(100); // Created By
+    changedOn     : Timestamp;   // Changed On
+    changedBy     : String(100); // Changed By
+}
