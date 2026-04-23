@@ -97,6 +97,7 @@ annotate service.ConfigurationReport with @(
         ]
     },
 
+    UI.Criticality : roleCriticality,
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
@@ -106,6 +107,8 @@ annotate service.ConfigurationReport with @(
         {
             $Type : 'UI.DataField',
             Value : userRole,
+            Criticality : roleCriticality,
+            CriticalityRepresentation : #WithoutIcon,
             ![@HTML5.CssDefaults] : { width : '11%' }
         },
         {

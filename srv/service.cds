@@ -4,9 +4,15 @@ service auditLoggingAndReportingService
 {
     entity UserAuditReports as projection on db.UserAuditReport;
 
-    entity RoleAuditReports as projection on db.RoleAuditReport;
+    entity RoleAuditReports as projection on db.RoleAuditReport {
+        *,
+        virtual  statusCriticality: Integer
+    };
 
-    entity ConfigurationReport as projection on db.ConfigurationReport;
+    entity ConfigurationReport as projection on db.ConfigurationReport {
+        *,
+        virtual roleCriticality : Integer
+    };
 
     entity ServiceAuditReports as projection on db.ServiceAuditReport;
 

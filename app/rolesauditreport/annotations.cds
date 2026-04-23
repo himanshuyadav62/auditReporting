@@ -157,6 +157,7 @@ annotate service.RoleAuditReports with @(
             {
                 $Type : 'UI.DataField',
                 Value : status,
+                Criticality : statusCriticality,
             },
             {
                 $Type : 'UI.DataField',
@@ -172,6 +173,7 @@ annotate service.RoleAuditReports with @(
             Target : '@UI.FieldGroup#GeneratedGroup',
         },
     ],
+    UI.Criticality : statusCriticality,
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
@@ -211,6 +213,7 @@ annotate service.RoleAuditReports with @(
         {
             $Type : 'UI.DataField',
             Value : status,
+            Criticality : statusCriticality,
             ![@HTML5.CssDefaults] : { width : '7%' }
         },
         {
