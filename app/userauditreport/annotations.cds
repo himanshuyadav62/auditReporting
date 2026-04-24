@@ -190,16 +190,6 @@ annotate service.UserAuditReports with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Value : eventType,
-            ![@HTML5.CssDefaults] : { width : '8%' }
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : event,
-            ![@HTML5.CssDefaults] : { width : '8%' }
-        },
-        {
-            $Type : 'UI.DataField',
             Value : userId,
             ![@HTML5.CssDefaults] : { width : '10%' }
         },
@@ -217,6 +207,16 @@ annotate service.UserAuditReports with @(
             $Type : 'UI.DataField',
             Value : roleCollection,
             ![@HTML5.CssDefaults] : { width : '9%' }
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : eventType,
+            ![@HTML5.CssDefaults] : { width : '8%' }
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : event,
+            ![@HTML5.CssDefaults] : { width : '8%' }
         },
         {
             $Type : 'UI.DataField',
