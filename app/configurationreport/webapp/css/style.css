@@ -9,7 +9,7 @@
 /* App_Dev role - yellowish row background */
 .sapUiTableRow:has(.sapMObjStatusWarning) .sapUiTableCell,
 .sapMListTblRow:has(.sapMObjStatusWarning) .sapMListTblCell {
-    background-color: #fff3cd !important;
+    background-color: #fad4be !important;
 }
 
 /* Reset only the userRole column text to normal (no colored text) */

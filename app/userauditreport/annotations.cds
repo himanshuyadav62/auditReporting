@@ -245,11 +245,6 @@ annotate service.UserAuditReports with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : status,
-            ![@HTML5.CssDefaults] : { width : '5%' }
-        },
-        {
-            $Type : 'UI.DataField',
             Value : subaccount,
             ![@HTML5.CssDefaults] : { width : '7%' }
         },

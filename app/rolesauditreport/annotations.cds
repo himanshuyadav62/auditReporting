@@ -212,12 +212,6 @@ annotate service.RoleAuditReports with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : status,
-            Criticality : statusCriticality,
-            ![@HTML5.CssDefaults] : { width : '7%' }
-        },
-        {
-            $Type : 'UI.DataField',
             Value : subaccountName,
             ![@HTML5.CssDefaults] : { width : '10%' }
         },

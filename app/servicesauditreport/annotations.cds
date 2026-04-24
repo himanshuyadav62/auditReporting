@@ -103,8 +103,7 @@ annotate service.ServiceAuditReports with @(
     // Add filter fields to the selection
     UI.SelectionFields : [
         subaccount,
-        serviceName,
-        planName
+        serviceName
     ],
     UI.LineItem : [
         {
@@ -116,11 +115,6 @@ annotate service.ServiceAuditReports with @(
             $Type : 'UI.DataField',
             Value : serviceName,
             ![@HTML5.CssDefaults] : { width : '18%' }
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : planName,
-            ![@HTML5.CssDefaults] : { width : '12%' }
         },
         {
             $Type : 'UI.DataField',
