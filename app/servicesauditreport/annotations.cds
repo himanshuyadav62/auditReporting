@@ -2,6 +2,7 @@ using auditLoggingAndReportingService as service from '../../srv/service';
 
 // Add labels to fields
 annotate service.ServiceAuditReports with {
+    system        @(Common.Label : 'System');
     subaccount    @(Common.Label : 'Subaccount');
     serviceName   @(Common.Label : 'Service Name');
     planName      @(Common.Label : 'Plan Name');
@@ -14,6 +15,20 @@ annotate service.ServiceAuditReports with {
 
 // Add value help for filter fields
 annotate service.ServiceAuditReports with {
+    system @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'ServiceSystemVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : system,
+                    ValueListProperty : 'system'
+                }
+            ]
+        }
+    );
+
     subaccount @(
         Common.ValueListWithFixedValues : true,
         Common.ValueList : {
@@ -102,10 +117,16 @@ annotate service.ServiceAuditReports with @(
     },
     // Add filter fields to the selection
     UI.SelectionFields : [
+        system,
         subaccount,
         serviceName
     ],
     UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : system,
+            ![@HTML5.CssDefaults] : { width : '11%' }
+        },
         {
             $Type : 'UI.DataField',
             Value : subaccount,

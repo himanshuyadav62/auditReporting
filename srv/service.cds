@@ -17,6 +17,8 @@ service auditLoggingAndReportingService
     entity ServiceAuditReports as projection on db.ServiceAuditReport;
 
     @readonly
+    entity UserSystemVH as select from db.UserAuditReport { key system } group by system;
+    @readonly
     entity UserEventTypeVH as select from db.UserAuditReport { key eventType } group by eventType;
     @readonly
     entity UserEventVH as select from db.UserAuditReport { key event } group by event;
@@ -29,6 +31,8 @@ service auditLoggingAndReportingService
     @readonly
     entity UserSubaccountVH as select from db.UserAuditReport { key subaccount } group by subaccount;
 
+    @readonly
+    entity RoleSystemVH as select from db.RoleAuditReport { key system } group by system;
     @readonly
     entity RoleCollectionVH as select from db.RoleAuditReport { key roleCollection } group by roleCollection;
     @readonly
@@ -43,6 +47,8 @@ service auditLoggingAndReportingService
     entity RoleChangedByVH as select from db.RoleAuditReport { key changedByUserId } group by changedByUserId;
 
     @readonly
+    entity ConfigSystemVH as select from db.ConfigurationReport { key system } group by system;
+    @readonly
     entity ConfigSubaccountVH as select from db.ConfigurationReport { key subAccount } group by subAccount;
     @readonly
     entity ConfigRoleCollectionVH as select from db.ConfigurationReport { key userRole as roleCollection } group by userRole;
@@ -51,6 +57,8 @@ service auditLoggingAndReportingService
     @readonly
     entity ConfigUserIdVH as select from db.ConfigurationReport { key userId } group by userId;
 
+    @readonly
+    entity ServiceSystemVH as select from db.ServiceAuditReport { key system } group by system;
     @readonly
     entity ServiceSubaccountVH as select from db.ServiceAuditReport { key subaccount } group by subaccount;
     @readonly

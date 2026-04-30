@@ -3,6 +3,7 @@ namespace audit;
 using {cuid} from '@sap/cds/common';
 
 entity UserAuditReport : cuid {
+    system         : String(50); // System
     timestamp      : Timestamp; // Timestamp (UTC)
     eventType      : String(50); // Event Type
     event          : String(100); // Event
@@ -20,6 +21,7 @@ entity UserAuditReport : cuid {
 }
 
 entity RoleAuditReport : cuid {
+    system          : String(50); // System
     roleCollection  : String(100); // Role Collection
     event           : String(100); // Event
     timestamp       : Timestamp; // Timestamp (UTC)
@@ -33,6 +35,7 @@ entity RoleAuditReport : cuid {
 }
 
 entity ConfigurationReport : cuid {
+    system          : String(50);
     userId          : String(100);
     userRole        : String(50);
     eventType       : String(50);
@@ -44,6 +47,7 @@ entity ConfigurationReport : cuid {
 }
 
 entity ServiceAuditReport : cuid {
+    system        : String(50);  // System
     subaccount    : String(100); // Subaccount
     serviceName   : String(100); // Service Name
     planName      : String(100); // Plan Name

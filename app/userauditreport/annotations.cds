@@ -2,6 +2,7 @@ using auditLoggingAndReportingService as service from '../../srv/service';
 
 // Add labels to fields
 annotate service.UserAuditReports with {
+    system @(Common.Label : 'System');
     timestamp @(Common.Label : 'Timestamp (UTC)');
     eventType @(Common.Label : 'Event Type');
     event @(Common.Label : 'Event');
@@ -20,6 +21,20 @@ annotate service.UserAuditReports with {
 
 // Add value help for filter fields
 annotate service.UserAuditReports with {
+    system @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'UserSystemVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : system,
+                    ValueListProperty : 'system'
+                }
+            ]
+        }
+    );
+
     eventType @(Common.ValueList : {
         CollectionPath : 'UserEventTypeVH',
         Parameters : [
@@ -105,6 +120,7 @@ annotate service.UserAuditReports with @(
     },
     // Add filter fields to the selection
     UI.SelectionFields : [
+        system,
         subaccount,
         event,
         userId,
@@ -121,6 +137,10 @@ annotate service.UserAuditReports with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
         Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : system,
+            },
             {
                 $Type : 'UI.DataField',
                 Value : timestamp,
@@ -188,6 +208,11 @@ annotate service.UserAuditReports with @(
         },
     ],
     UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : system,
+            ![@HTML5.CssDefaults] : { width : '8%' }
+        },
         {
             $Type : 'UI.DataField',
             Value : userId,

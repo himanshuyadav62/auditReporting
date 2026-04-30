@@ -2,6 +2,7 @@ using auditLoggingAndReportingService as service from '../../srv/service';
 
 // Add labels to fields
 annotate service.RoleAuditReports with {
+    system @(Common.Label : 'System');
     roleCollection @(Common.Label : 'Role Collection');
     event @(Common.Label : 'Event');
     timestamp @(Common.Label : 'Timestamp (UTC)');
@@ -16,6 +17,20 @@ annotate service.RoleAuditReports with {
 
 // Add value help for filter fields
 annotate service.RoleAuditReports with {
+    system @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'RoleSystemVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : system,
+                    ValueListProperty : 'system'
+                }
+            ]
+        }
+    );
+
     roleCollection @(
         Common.ValueListWithFixedValues : true,
         Common.ValueList : {
@@ -105,6 +120,7 @@ annotate service.RoleAuditReports with @(
     },
     // Add filter fields to the selection
     UI.SelectionFields : [
+        system,
         subaccountName,
         roleCollection,
         event,
@@ -122,6 +138,10 @@ annotate service.RoleAuditReports with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
         Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : system,
+            },
             {
                 $Type : 'UI.DataField',
                 Value : roleCollection,
@@ -175,6 +195,11 @@ annotate service.RoleAuditReports with @(
     ],
     UI.Criticality : statusCriticality,
     UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : system,
+            ![@HTML5.CssDefaults] : { width : '9%' }
+        },
         {
             $Type : 'UI.DataField',
             Value : roleCollection,

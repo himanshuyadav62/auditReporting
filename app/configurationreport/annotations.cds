@@ -2,6 +2,7 @@ using auditLoggingAndReportingService as service from '../../srv/service';
 
 // Add labels to fields
 annotate service.ConfigurationReport with {
+    system          @(Common.Label : 'System');
     userId          @(Common.Label : 'User ID');
     userRole        @(Common.Label : 'User Role');
     eventType       @(Common.Label : 'Event Type');
@@ -14,6 +15,20 @@ annotate service.ConfigurationReport with {
 
 // Add value help for filter fields
 annotate service.ConfigurationReport with {
+    system @(
+        Common.ValueListWithFixedValues : true,
+        Common.ValueList : {
+            CollectionPath : 'ConfigSystemVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : system,
+                    ValueListProperty : 'system'
+                }
+            ]
+        }
+    );
+
     subAccount @(
         Common.ValueListWithFixedValues : true,
         Common.ValueList : {
@@ -82,6 +97,7 @@ annotate service.ConfigurationReport with @(
     },
     // Add filter fields to the selection
     UI.SelectionFields : [
+        system,
         subAccount,
         userRole,
         eventType,
@@ -99,6 +115,11 @@ annotate service.ConfigurationReport with @(
 
     UI.Criticality : roleCriticality,
     UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : system,
+            ![@HTML5.CssDefaults] : { width : '10%' }
+        },
         {
             $Type : 'UI.DataField',
             Value : userId,
